@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cinepolis.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False"
              Title="Login">
-    <VerticalStackLayout Margin="20, 110, 20, 40">
+    <VerticalStackLayout Margin="20, 96, 20, 40">
         <Image Source="cinepolis_logo.png"
                Aspect="AspectFill" />
         <Label Text="Iniciar Sesión"
@@ -18,9 +19,19 @@
                IsPassword="True"
                Margin="0,10"
                x:Name="PasswordEntry" />
+        <StackLayout Orientation="Horizontal"
+                     Spacing="10">
+            <Label Text="Recordar contraseña"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="16" />
+            <CheckBox x:Name="RememberPassowrd" 
+                      VerticalOptions="Center"/>
+        </StackLayout>
         <Button Text="Ingresar"
                 Margin="0,20"
                 x:Name="LoginButton"
+                Clicked="LoginButton_Clicked"
                 FontAttributes="Bold"
                 FontSize="16" />
         <Label Text="¿Olvido su contraseña?"

@@ -1,12 +1,14 @@
-﻿namespace Cinepolis
+﻿using Firebase.Auth;
+using Cinepolis.Views;
+namespace Cinepolis
 {
     public partial class App : Application
     {
-        public App()
+        public App(FirebaseAuthClient firebaseAuthClient)
         {
             InitializeComponent();
 
-            MainPage = new Views.SignUpPage();
+            MainPage = new NavigationPage(new LoginPage(firebaseAuthClient));
         }
     }
 }
