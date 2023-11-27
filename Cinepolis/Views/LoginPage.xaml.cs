@@ -71,7 +71,7 @@ public partial class LoginPage : ContentPage
 
     private void ForgotPasswordLinkClicked(object sender, EventArgs e)
     {
-
+        Navigation.PushAsync(new ForgotPasswordPage(_clientAuth));
     }
 
     private async void OnSignUpLinkClicked(object sender, EventArgs e)

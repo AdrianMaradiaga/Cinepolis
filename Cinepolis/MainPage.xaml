@@ -14,9 +14,12 @@
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
-
-
-
+            
+            <Label x:Name="UserEmailLabel"
+                   FontSize="20"
+                   TextColor="Black"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
 
