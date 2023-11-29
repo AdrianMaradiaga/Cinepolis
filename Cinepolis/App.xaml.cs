@@ -9,6 +9,7 @@ namespace Cinepolis
             InitializeComponent();
 
             MainPage = new NavigationPage(new LoginPage(firebaseAuthClient));
+            //MainPage = new NavigationPage(new Home());
         }
     }
 }

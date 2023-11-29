@@ -15,6 +15,11 @@ namespace Cinepolis
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Gilroy-Bold.ttf", "GilroyBold");
+                    fonts.AddFont("Gilroy-Medium.ttf", "GilroyMedium");
+                    fonts.AddFont("Gilroy-Regular.ttf", "GilroyRegular");
+                    fonts.AddFont("Gilroy-SemiBold.ttf", "GilroySemiBold");
+                    fonts.AddFont("Gilroy-Thin.ttf", "GilroyThin");
                 });
             builder.Services.AddSingleton(new FirebaseAuthClient(new FirebaseAuthConfig()
             {

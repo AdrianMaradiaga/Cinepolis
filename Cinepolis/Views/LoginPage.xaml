@@ -9,7 +9,7 @@
                Aspect="AspectFill" />
         <Label Text="Iniciar Sesión"
                FontSize="Large"
-               FontAttributes="Bold"
+               FontFamily="GilroySemiBold"
                Margin="0,20"
                HorizontalOptions="Center"/>
         <Entry Placeholder="Correo electrónico"
@@ -24,6 +24,7 @@
             <Label Text="Recordar contraseña"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
+                   FontFamily="GilroySemiBold"
                    FontSize="16" />
             <CheckBox x:Name="RememberPassowrd" 
                       VerticalOptions="Center"/>
@@ -32,7 +33,6 @@
                 Margin="0,20"
                 x:Name="LoginButton"
                 Clicked="LoginButton_Clicked"
-                FontAttributes="Bold"
                 FontSize="16" />
         <Label Text="¿Olvido su contraseña?"
                FontSize="16"
@@ -40,6 +40,7 @@
                VerticalOptions="Center"
                HorizontalOptions="Center"
                FontAttributes="None"
+               FontFamily="GilroySemiBold"
                Margin="0,20">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ForgotPasswordLinkClicked" />
@@ -55,12 +56,13 @@
             <Label Text="¿No tienes cuenta?"
                    TextColor="Gray"
                    FontSize="16"
+                   FontFamily="GilroySemiBold"
                    VerticalOptions="Center" />
             <Label Text="Registrate"
                    FontSize="16"
+                   FontFamily="GilroySemiBold"
                    TextColor="#002f6c"
-                   VerticalOptions="Center"
-                   FontAttributes="Bold">
+                   VerticalOptions="Center">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnSignUpLinkClicked" />
                 </Label.GestureRecognizers>

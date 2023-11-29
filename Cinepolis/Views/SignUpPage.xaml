@@ -9,7 +9,7 @@
                Aspect="AspectFill" />
         <Label Text="Registrarse"
                FontSize="Large"
-               FontAttributes="Bold"
+               FontFamily="GilroySemiBold"
                Margin="0,20" />
        
      
@@ -29,7 +29,6 @@
                 Clicked="SignUpButton_Clicked"
                 Margin="0,20"
                 x:Name="SignUpButton"
-                FontAttributes="Bold"
                 FontSize="16" />
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="CenterAndExpand"
@@ -38,12 +37,13 @@
             <Label Text="¿Ya tienes una cuenta?"
                    TextColor="Gray"
                    FontSize="16"
+                   FontFamily="GilroySemiBold"
                    VerticalOptions="Center" />
             <Label Text="Iniciar sesión"
                    FontSize="16"
+                   FontFamily="GilroySemiBold"
                    TextColor="#002f6c"
-                   VerticalOptions="Center"
-                   FontAttributes="Bold">
+                   VerticalOptions="Center">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnSignInLinkClicked" />
                 </Label.GestureRecognizers>
