@@ -65,6 +65,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
+		<PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
@@ -86,6 +87,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MoviesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SignUpPage.xaml">

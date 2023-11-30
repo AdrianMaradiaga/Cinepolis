@@ -31,7 +31,7 @@
                    Margin="5,20,10,5" 
                    TextColor="#002f6c"
                    FontFamily="Gilroy-SemiBold"/>
-
+            <!-- Primer CarouselView -->
             <CarouselView Margin="5,6,5,5"
                           ItemsSource="{Binding Movie}"
                           IndicatorView="indicatorV">
@@ -44,23 +44,26 @@
                                 StrokeThickness="1"
                                 WidthRequest="300">
                             <Grid>
-                                <Image Grid.RowSpan="3" Aspect="AspectFill" Source="{Binding Image}"/>
-
-                                <StackLayout Grid.Row="2" BackgroundColor="Gray" Margin="0,400,0,0">
-                                    <!-- Aquí puedes agregar etiquetas para mostrar texto -->
-                                    <Label Text="{Binding MovieTime, StringFormat='Tiempo: {0%m} mins'}" Margin="15,0,0,0"/>
-                                    <Label Text="{Binding Name}" 
-                                           TextColor="#002f6c" 
-                                           FontSize="16" 
+                                <Image Grid.RowSpan="3"
+                                       Aspect="AspectFill"
+                                       Source="{Binding RutaImagen}" />
+                                <StackLayout Grid.Row="2"
+                                             BackgroundColor="Gray"
+                                             Margin="0,400,0,0">
+                                    <!-- Cambié MovieTime por Descripcion -->
+                                    <Label Text="{Binding Descripcion}"
+                                           Margin="15,0,0,0" />
+                                    <Label Text="{Binding Nombre}"
+                                           TextColor="#002f6c"
+                                           FontSize="16"
                                            FontFamily="Gilroy-SemiBold"
-                                           Margin="15,0,0,0"/>
+                                           Margin="15,0,0,0" />
                                 </StackLayout>
                             </Grid>
                         </Border>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
-
             <IndicatorView x:Name="indicatorV"
                            HorizontalOptions="Center"
                            IndicatorColor="DarkGray"
@@ -74,7 +77,7 @@
                    Margin="5,20,10,5" 
                    TextColor="#002f6c"
                    FontFamily="Gilroy-SemiBold"/>
-
+            <!-- Segundo CarouselView -->
             <CarouselView Margin="5,5,10,5"
                           ItemsSource="{Binding Movie2}"
                           IndicatorView="indicatorV2">
@@ -87,23 +90,26 @@
                                 StrokeThickness="1"
                                 WidthRequest="300">
                             <Grid>
-                                <Image Grid.RowSpan="3" Aspect="AspectFill" Source="{Binding Image}"/>
-
-                                <StackLayout Grid.Row="2" BackgroundColor="Gray" Margin="0,400,0,0">
-                                    <!-- Aquí puedes agregar etiquetas para mostrar texto -->
-                                    <Label Text="{Binding MovieTime, StringFormat='Tiempo: {0%m} mins'}" Margin="15,0,0,0"/>
-                                    <Label Text="{Binding Name}" 
-                                           TextColor="#002f6c" 
-                                           FontSize="16" 
+                                <Image Grid.RowSpan="3"
+                                       Aspect="AspectFill"
+                                       Source="{Binding RutaImagen}" />
+                                <StackLayout Grid.Row="2"
+                                             BackgroundColor="Gray"
+                                             Margin="0,400,0,0">
+                                    <!-- Cambié MovieTime por Descripcion -->
+                                    <Label Text="{Binding Descripcion}"
+                                           Margin="15,0,0,0" />
+                                    <Label Text="{Binding Nombre}"
+                                           TextColor="#002f6c"
+                                           FontSize="16"
                                            FontFamily="Gilroy-SemiBold"
-                                           Margin="15,0,0,0"/>
+                                           Margin="15,0,0,0" />
                                 </StackLayout>
                             </Grid>
                         </Border>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
-
             <IndicatorView x:Name="indicatorV2"
                            HorizontalOptions="Center"
                            IndicatorColor="DarkGray"
