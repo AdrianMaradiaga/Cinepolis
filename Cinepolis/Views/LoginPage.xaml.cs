@@ -25,7 +25,7 @@ public partial class LoginPage : ContentPage
     {
         if(_userRepository.UserExists()) {
             (_userInfo, _credential) = _userRepository.ReadUser();
-            await Navigation.PushAsync(new NavigationPage(new MoviesPage())); 
+            await Navigation.PushAsync(new NavigationPage(new SnacksPage())); 
         }
     }
 
@@ -44,7 +44,7 @@ public partial class LoginPage : ContentPage
                 _userRepository.DeleteUser();
             }
 
-            await Navigation.PushAsync(new NavigationPage(new MoviesPage())); 
+            await Navigation.PushAsync(new NavigationPage(new SnacksPage())); 
         }
         catch (FirebaseAuthException firebaseAuthException)
         {
