@@ -13,22 +13,5 @@
         </ResourceDictionary>
     </Application.Resources>
 
-    <Application.MainPage>
-        <Shell>
-            <TabBar x:Name="PhoneTabs">
-                <Tab Title="Inicio" Icon="home.svg">
-                    <ShellContent ContentTemplate="{DataTemplate views:Home}"/>
-                </Tab>
-                <Tab Title="Películas" Icon="movies.svg">
-                    <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
-                </Tab>
-                <Tab Title="Comida" Icon="food.svg">
-                    <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
-                </Tab>
-                <Tab Title="Perfil" Icon="profile.svg">
-                    <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
-                </Tab>
-            </TabBar>
-        </Shell>
-    </Application.MainPage>
+   
 </Application>

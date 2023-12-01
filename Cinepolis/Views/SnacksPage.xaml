@@ -71,21 +71,6 @@
                 </CollectionView>
             </Grid>
         </ScrollView>
-        <!-- Menú inferior -->
-        <StackLayout Grid.Row="1"
-                     Orientation="Horizontal">
-            <Button Text="Inicio"
-                    Style="{StaticResource MenuButtonStyle}"
-                    HorizontalOptions="FillAndExpand" />
-            <Button Text="Películas"
-                    Style="{StaticResource MenuButtonStyle}"
-                    HorizontalOptions="FillAndExpand" />
-            <Button Text="Aperitivos"
-                    Style="{StaticResource MenuButtonStyle}"
-                    HorizontalOptions="FillAndExpand" />
-            <Button Text="Usuario"
-                    Style="{StaticResource MenuButtonStyle}"
-                    HorizontalOptions="FillAndExpand" />
-        </StackLayout>
+      
     </Grid>
 </ContentPage>

@@ -7,9 +7,8 @@ namespace Cinepolis
         public App(FirebaseAuthClient firebaseAuthClient)
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new LoginPage(firebaseAuthClient));
-            //MainPage = new NavigationPage(new Home());
+            //MainPage = new AppShell();
         }
     }
 }
