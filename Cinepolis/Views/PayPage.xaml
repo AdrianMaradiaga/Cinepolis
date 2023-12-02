@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cinepolis.Views.PayPage"
+             Title="Pago con Tarjeta">
+    
+    <StackLayout Padding="20">
+        <Image Source="cinepolis_logo.png"
+               Aspect="AspectFill" />
+        <StackLayout Margin="20">
+            <Label Text="Número de Tarjeta"
+                   FontSize="Medium" />
+            <Entry Placeholder="Ingrese el número de tarjeta"
+                   Keyboard="Numeric"
+                   x:Name="numeroTarjetaEntry"
+                   MaxLength="16" />
+            <Label Text="Fecha de Vencimiento"
+                   FontSize="Medium" />
+            <DatePicker Format="MM/yyyy"
+                        x:Name="fechaVencimientoPicker" />
+            <Label Text="CVV"
+                   FontSize="Medium" />
+            <Entry Placeholder="Ingrese el código de seguridad (CVV)"
+                   Keyboard="Numeric"
+                   x:Name="cvvEntry"
+                   MaxLength="4" />
+            <Label Text="Tipo de Tarjeta"
+                       FontSize="Medium" />
+                <Picker Title="Seleccionar tipo de tarjeta"
+                        x:Name="tipoTarjetaPicker">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                        <x:String>Visa</x:String>
+                        <!-- Agrega más tipos de tarjeta según sea necesario -->
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Realizar Pago"
+                        Clicked="RealizarPago_Clicked"
+                        BackgroundColor="#002f6c"
+                        TextColor="White"
+                        FontSize="Medium"
+                        CornerRadius="5"
+                        Margin="0,20,0,0" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

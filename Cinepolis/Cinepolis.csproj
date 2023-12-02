@@ -96,6 +96,9 @@
 	  <MauiXaml Update="Views\MoviesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\PayPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\SelectSnacks.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
