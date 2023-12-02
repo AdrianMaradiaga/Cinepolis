@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cinepolis.Views.GenerateQRPage"
+             Title="Generador QR"
+             Shell.TabBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10"
+                             Padding="30"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="Center">
+            <Label Text="Datos"
+                   SemanticProperties.HeadingLevel="Level1"
+                   SemanticProperties.Description="Datos"
+                   FontSize="18"
+                   HorizontalOptions="FillAndExpand" />
+            <!-- el nombre de la película -->
+            <Frame BorderColor="LightSlateGray"
+                   Padding="10,0">
+                <Entry x:Name="InputTextPelicula"
+                       Text=""
+                       Placeholder="Nombre de pelicula"
+                       SemanticProperties.HeadingLevel="Level2"
+                       SemanticProperties.Description="Introduzca el nombre de la película aquí..."
+                       FontSize="18"
+                       HorizontalOptions="FillAndExpand" />
+            </Frame>
+            <!-- Entry para la hora -->
+            <Frame BorderColor="LightSlateGray"
+                   Padding="10,0">
+                <Entry x:Name="InputTextHora"
+                       Text=""
+                       Placeholder="Hora"
+                       SemanticProperties.HeadingLevel="Level2"
+                       SemanticProperties.Description="Introduzca la hora aquí..."
+                       FontSize="18"
+                       HorizontalOptions="FillAndExpand" />
+            </Frame>
+            <!-- Entry para el número de asiento -->
+            <Frame BorderColor="LightSlateGray"
+                   Padding="10,0">
+                <Entry x:Name="InputTextAsiento"
+                       Text=""
+                       Placeholder="Número de asiento"
+                       SemanticProperties.HeadingLevel="Level2"
+                       SemanticProperties.Description="Introduzca aquí el número de asiento..."
+                       FontSize="18"
+                       HorizontalOptions="FillAndExpand" />
+            </Frame>
+            <!-- Entry para la fecha -->
+            <Frame BorderColor="LightSlateGray"
+                   Padding="10,0">
+                <Entry x:Name="InputTextFecha"
+                       Text=""
+                       Placeholder="Fecha"
+                       SemanticProperties.HeadingLevel="Level2"
+                       SemanticProperties.Description="Introduzca la fecha aquí..."
+                       FontSize="18"
+                       HorizontalOptions="FillAndExpand" />
+            </Frame>
+            <Button x:Name="GenerateBtn"
+                    Text="Generar"
+                    SemanticProperties.Hint="Genera el código QR al hacer clic"
+                    Clicked="OnGenerateClicked"
+                    HorizontalOptions="FillAndExpand" />
+            <Frame BorderColor="LightSlateGray"
+                   BackgroundColor="White"
+                   Padding="10">
+                <Image x:Name="QrCodeImage"
+                       HeightRequest="200"
+                       WidthRequest="200" />
+            </Frame>
+            <!-- Botón para limpiar los campos -->
+            <Button x:Name="ClearFieldsBtn"
+                    Text="Limpiar"
+                    Clicked="OnClearFieldsClicked"
+                    HorizontalOptions="FillAndExpand" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
