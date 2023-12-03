@@ -60,6 +60,7 @@
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\movies.svg" />
 	  <None Remove="Resources\Images\profile.svg" />
+	  <None Remove="Resources\Images\trolls.jpg" />
 	  <None Remove="Resources\Splash\cinepolisss.svg" />
 	</ItemGroup>
 
@@ -91,6 +92,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MovieDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\MoviesPage.xaml">

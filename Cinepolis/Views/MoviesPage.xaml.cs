@@ -38,7 +38,7 @@ public partial class MoviesPage : ContentPage
         string filtro = filtroEntry.Text.ToLower();
         if (filtro.Length > 0)
         {
-            listaPeliculas.ItemsSource = Lista.Where(X => X.Nombre.ToLower().Contains(filtro)).ToList();
+            listaPeliculas.ItemsSource = Lista.Where(X => X.Titulo.ToLower().Contains(filtro)).ToList();
         }
         else
         {

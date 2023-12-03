@@ -46,14 +46,18 @@
                             <Grid>
                                 <Image Grid.RowSpan="3"
                                        Aspect="AspectFill"
-                                       Source="{Binding RutaImagen}" />
+                                       Source="{Binding RutaImagenP}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnCarouselItemTapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                                 <StackLayout Grid.Row="2"
                                              BackgroundColor="Gray"
                                              Margin="0,400,0,0">
                                     <!-- Cambié MovieTime por Descripcion -->
-                                    <Label Text="{Binding Descripcion}"
+                                    <Label Text="{Binding Duracion}"
                                            Margin="15,0,0,0" />
-                                    <Label Text="{Binding Nombre}"
+                                    <Label Text="{Binding Titulo}"
                                            TextColor="#002f6c"
                                            FontSize="16"
                                            FontFamily="Gilroy-SemiBold"
@@ -92,14 +96,18 @@
                             <Grid>
                                 <Image Grid.RowSpan="3"
                                        Aspect="AspectFill"
-                                       Source="{Binding RutaImagen}" />
+                                       Source="{Binding RutaImagenP}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnCarouselItemTapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                                 <StackLayout Grid.Row="2"
                                              BackgroundColor="Gray"
                                              Margin="0,400,0,0">
                                     <!-- Cambié MovieTime por Descripcion -->
-                                    <Label Text="{Binding Descripcion}"
+                                    <Label Text="{Binding Duracion}"
                                            Margin="15,0,0,0" />
-                                    <Label Text="{Binding Nombre}"
+                                    <Label Text="{Binding Titulo}"
                                            TextColor="#002f6c"
                                            FontSize="16"
                                            FontFamily="Gilroy-SemiBold"

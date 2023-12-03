@@ -7,7 +7,7 @@
     xmlns:views="clr-namespace:Cinepolis.Views"
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
-        <Tab Title="Homoe"
+        <Tab Title="Home"
              Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate views:Home}" />
         </Tab>
