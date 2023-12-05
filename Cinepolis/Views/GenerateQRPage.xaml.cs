@@ -24,9 +24,6 @@ public partial class GenerateQRPage : ContentPage
         QrCodeImage.Source = ImageSource.FromStream(() => new MemoryStream(qrCodeBytes));
     }
 
-
-
-
     private void OnClearFieldsClicked(object sender, EventArgs e)
     {
         InputTextPelicula.Text = string.Empty;

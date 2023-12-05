@@ -12,7 +12,6 @@ public partial class PayPage : ContentPage
     {
         validaciones();
         // Accede a los valores de los controles para obtener la información de la tarjeta
-       
     }
 
     private async void validaciones()

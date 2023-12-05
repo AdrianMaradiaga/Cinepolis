@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Maui.Controls;assembly=SkiaSharp.Views.Maui.Controls"
+             x:Class="Cinepolis.Views.SelectSeatsPage"
+             NavigationPage.HasNavigationBar="False"
+             Shell.TabBarIsVisible="False">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" VerticalOptions="StartAndExpand">
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="5" Margin="20,50,0,-10">
+                    <Image Source="themarvels.jpg" Aspect="AspectFit" HeightRequest="200" />
+
+                    <!-- Columna de la información -->
+                    <StackLayout VerticalOptions="StartAndExpand" Margin="10,-25,0,0" Spacing="8">
+                        <Label Text="The Marvels" TextColor="#002f6c" FontFamily="Gilroy-SemiBold" FontSize="25"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Cine:" FontFamily="Gilroy-SemiBold" FontSize="15" />
+                            <Label Text=" San Pedro Sula" FontFamily="Gilroy-SemiBold" FontSize="15" TextColor="Gray"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Hora:" FontFamily="Gilroy-SemiBold" FontSize="15" />
+                            <Label Text=" 3:00 PM" FontFamily="Gilroy-SemiBold" FontSize="15" TextColor="Gray"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Fecha:" FontFamily="Gilroy-SemiBold" FontSize="15" />
+                            <Label Text=" 06/12/2023" FontFamily="Gilroy-SemiBold" FontSize="15" TextColor="Gray"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Sala:" FontFamily="Gilroy-SemiBold" FontSize="15" />
+                            <Label Text=" 1" FontFamily="Gilroy-SemiBold" FontSize="15" TextColor="Gray"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView BackgroundColor="Gray" Opacity="0.2" HeightRequest="1" WidthRequest="370" Margin="0,50,0,0"/>
+                <!-- Cuadritos -->
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
+                        <Rectangle Fill="#353551" StrokeThickness="1" HeightRequest="15" WidthRequest="15"/>
+                        <Label Text=" Disponible" TextColor="#002f6c" FontSize="14" FontFamily="Gilroy-SemiBold" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Rectangle Fill="#CF010B" StrokeThickness="1" HeightRequest="15" WidthRequest="15"/>
+                        <Label Text=" Reservado" TextColor="#002f6c" FontSize="14" FontFamily="Gilroy-SemiBold" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Rectangle Fill="#FFD200" StrokeThickness="1" HeightRequest="15" WidthRequest="15"/>
+                        <Label Text=" Seleccionado" TextColor="#002f6c" FontSize="14" FontFamily="Gilroy-SemiBold" VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Grid BackgroundColor="Transparent" Padding="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="10*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- "Pantalla" -->
+                    <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" Spacing="30">
+                        <Path Stroke="#002f6c" Aspect="Fill" StrokeThickness="5" WidthRequest="15"
+                          Data="M0,0S74.587-33.916,148.078-33.916,293.962,0,293.962,0" Margin="0,0,45,0"/>
+                        <Label Text="Pantalla" HorizontalOptions="Center" FontSize="15" FontFamily="Gilroy-SemiBold" TextColor="Gray" Margin="0,-35,55,0"/>
+                    </StackLayout>
+                </Grid>
+
+                <!-- Grid para los asientos y las letras -->
+                <Grid BackgroundColor="Transparent" Padding="5,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <!-- Columna para las letras -->
+                        <ColumnDefinition Width="1*" />
+                        <!-- Columna para los asientos -->
+                        <ColumnDefinition Width="8*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Letras -->
+                    <StackLayout Grid.Column="0" Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="10,0,0,0">
+                        <Label Text="A" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                        <Label Text="B" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                        <Label Text="C" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                        <Label Text="D" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                        <Label Text="E" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+
+                    <!-- FILA A -->
+                    <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="-15,-105,0,0">
+                        <Button Text="A1" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="A2" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="A3" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="A4" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="A5" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="A6" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                    </StackLayout>
+                    <!--Numeración Fila A-->
+                    <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" InputTransparent="True" Margin="2,-100,0,0">
+                        <Label Text="1" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="2" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="3" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="4" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="5" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="6" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                    </StackLayout>
+
+                    <!-- FILA B -->
+                    <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="-15,-50,0,0">
+                        <Button Text="B1" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="B2" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="B3" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#CF010B" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="B4" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="B5" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                        <Button Text="B6" WidthRequest="26" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" FontSize="Micro" />
+                    </StackLayout>
+                    <!--Numeración Fila B-->
+                    <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" InputTransparent="True" Margin="2,-50,0,0">
+                        <Label Text="1" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="2" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="3" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="4" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="5" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="6" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                    </StackLayout>
+
+                    <!-- FILA C -->
+                    <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="-15,3,0,0">
+                        <Button Text="C1" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="C2" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="C3" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="C4" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="C5" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="C6" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="C7" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="C8" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                    </StackLayout>
+                    <!--Numeración Fila C -->
+                    <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" InputTransparent="True" Margin="2,3,0,0">
+                        <Label Text="1" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="2" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="3" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="4" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="5" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="6" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="7" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="8" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                    </StackLayout>
+
+                    <!-- FILA D -->
+                    <StackLayout Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="-15,56,0,0">
+                        <Button Text="D1" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="D2" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="D3" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="D4" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="D5" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="D6" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="D7" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="D8" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="D9" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="D10" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                    </StackLayout>
+                    <!--Numeración Fila D-->
+                    <StackLayout Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" InputTransparent="True" Margin="15,56,20,0">
+                        <Label Text=" 1" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 2" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 3" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 4" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 5" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 6" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 7" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 8" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 9" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="10" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                    </StackLayout>
+
+                    <!-- FILA E -->
+                    <StackLayout Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="-15,110,0,0">
+                        <Button Text="E1" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="E2" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="E3" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="E4" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="E5" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="E6" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="E7" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="E8" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="E9" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                        <Button Text="E10" WidthRequest="25" HeightRequest="25" CornerRadius="5" BackgroundColor="#353551" Clicked="OnSeatClicked" />
+                    </StackLayout>
+                    <!--Numeración Fila E-->
+                    <StackLayout Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" InputTransparent="True" Margin="15,110,20,0">
+                        <Label Text=" 1" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 2" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 3" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 4" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 5" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 6" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 7" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 8" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text=" 9" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                        <Label Text="10" WidthRequest="25" HeightRequest="25" TextColor="white"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Margin="30,20,30,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Text="Total L. (ISV incluido)" 
+                           TextColor="#002f6c"
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Start" />
+
+                    <Label Grid.Column="1"
+                           Text="140" 
+                           FontAttributes="Bold"
+                           TextColor="#002f6c"
+                           VerticalOptions="Center" 
+                           HorizontalOptions="End" />
+                </Grid>
+
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,50,0,0">
+                    <Button Text="Siguiente"
+                            CornerRadius="20"
+                            HeightRequest="40"
+                            WidthRequest="150"
+                            HorizontalOptions="Center" 
+                            Clicked="SiguienteClicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

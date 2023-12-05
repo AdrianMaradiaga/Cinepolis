@@ -54,12 +54,17 @@
 	  <None Remove="Resources\Fonts\Gilroy-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Gilroy-SemiBold.ttf" />
 	  <None Remove="Resources\Fonts\Gilroy-Thin.ttf" />
+	  <None Remove="Resources\Images\calendario.svg" />
 	  <None Remove="Resources\Images\Cinepolis_logo.svg" />
 	  <None Remove="Resources\Images\cinepolis_logo2016.svg" />
+	  <None Remove="Resources\Images\Combo1.png" />
+	  <None Remove="Resources\Images\Combo2.png" />
 	  <None Remove="Resources\Images\food.svg" />
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\movies.svg" />
 	  <None Remove="Resources\Images\profile.svg" />
+	  <None Remove="Resources\Images\reloj.svg" />
+	  <None Remove="Resources\Images\themarvels.jpg" />
 	  <None Remove="Resources\Images\trolls.jpg" />
 	  <None Remove="Resources\Splash\cinepolisss.svg" />
 	</ItemGroup>
@@ -69,6 +74,7 @@
 		<PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="QRCoder" Version="1.4.3" />
+		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.6" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -101,6 +107,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PayPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SelectSeatsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SelectSnacks.xaml">
