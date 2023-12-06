@@ -11,7 +11,6 @@ public partial class PayPage : ContentPage
     private void RealizarPago_Clicked(object sender, EventArgs e)
     {
         validaciones();
-        // Accede a los valores de los controles para obtener la información de la tarjeta
     }
 
     private async void validaciones()

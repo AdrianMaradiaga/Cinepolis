@@ -31,7 +31,7 @@
             <Entry Placeholder="Ingrese el código de seguridad (CVV)"
                    Keyboard="Numeric"
                    x:Name="cvvEntry"
-                   MaxLength="4" />
+                   MaxLength="3" />
             <Label Text="Tipo de Tarjeta"
                        FontSize="Medium" />
                 <Picker Title="Seleccionar tipo de tarjeta"
