@@ -3,10 +3,21 @@ namespace Cinepolis.Views;
 public partial class SelectSeatsPage : ContentPage
 {
     private List<string> asientosSeleccionados = new List<string>();
+    string RutaImagenP;
+
 
     public SelectSeatsPage()
     {
         InitializeComponent();
+    }
+
+    public void UpdateMovieInfo(string titulo, string horario, string rutaImagenP, string cine)
+    {
+        MovieTituloLabel.Text = titulo;
+        MovieHorarioLabel.Text = horario;
+        RutaImagenP = rutaImagenP;
+        MovieImage.Source = RutaImagenP;
+        CineLabel.Text = cine;
     }
 
     private void OnSeatClicked(object sender, EventArgs e)

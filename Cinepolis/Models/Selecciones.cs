@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Cinepolis.Models
 {
-    public class Peliculas
+    public class Selecciones
     {
+        public string Cine { get; set; }
         public string Titulo { get; set; }
-        public string Duracion { get; set; }
-        public string Sinopsis { get; set; }
+        public string Horario { get; set; }
         public string RutaImagenP { get; set; }
-        public string RutaImagenB { get; set; }
     }
 }

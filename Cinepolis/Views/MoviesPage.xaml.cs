@@ -1,5 +1,3 @@
-
-
 using LiteDB;
 using Firebase.Database;
 using Cinepolis.Models;
@@ -9,12 +7,12 @@ namespace Cinepolis.Views;
 
 public partial class MoviesPage : ContentPage
 {
-    FirebaseClient client = new FirebaseClient("https://prueba-5d6e8-default-rtdb.firebaseio.com/");
+    FirebaseClient client = new FirebaseClient("https://cinepolis-d5adc-default-rtdb.firebaseio.com/");
     public ObservableCollection<Peliculas> Lista { get; set; } = new ObservableCollection<Peliculas>();
 
     public MoviesPage()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         BindingContext = this;
         CargaLista();
     }
@@ -25,25 +23,10 @@ public partial class MoviesPage : ContentPage
             .AsObservable<Peliculas>()
             .Subscribe(Peliculas =>
             {
-                if (Peliculas != null)
+                if (Peliculas != null && Peliculas.Object != null)
                 {
                     Lista.Add(Peliculas.Object);
                 }
             });
-    }
-
-
-    private void filtroEntry_TextChanged(object sender, TextChangedEventArgs e)
-    {
-        string filtro = filtroEntry.Text.ToLower();
-        if (filtro.Length > 0)
-        {
-            listaPeliculas.ItemsSource = Lista.Where(X => X.Titulo.ToLower().Contains(filtro)).ToList();
-        }
-        else
-        {
-
-            listaPeliculas.ItemsSource = Lista.ToList();
-        }
     }
 }

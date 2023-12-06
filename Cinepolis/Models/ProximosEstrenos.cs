@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cinepolis.Models
 {
-    public class Peliculas
+    public class ProximosEstrenos
     {
+        public int IdPelicula { get; set; }
         public string Titulo { get; set; }
         public string Duracion { get; set; }
         public string Sinopsis { get; set; }

@@ -26,12 +26,6 @@
                        Margin="10,5,0,10"
                        Grid.Row="0"
                        Grid.Column="0" />
-                <SearchBar Placeholder="Buscar..."
-                           x:Name="filtroEntry"
-                           Grid.Row="1"
-                           Grid.Column="0"
-                           TextChanged="filtroEntry_TextChanged"
-                           Margin="10,5,0,10"></SearchBar>
                 <CollectionView x:Name="listaPeliculas"
                                 ItemsSource="{Binding Lista}"
                                 Grid.Row="2"
@@ -49,19 +43,19 @@
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Image Source="{Binding RutaImagen}"
+                                <Image Source="{Binding RutaImagenP}"
                                        Aspect="AspectFill"
                                        HeightRequest="120"
                                        WidthRequest="120"
                                        Grid.RowSpan="2" />
                                 <Label Grid.Column="1"
                                        Grid.Row="0"
-                                       Text="{Binding Nombre}"
+                                       Text="{Binding Titulo}"
                                        FontAttributes="Bold"
                                        FontSize="20" />
                                 <Label Grid.Column="1"
                                        Grid.Row="1"
-                                       Text="{Binding Descripcion}"
+                                       Text="{Binding Sinopsis}"
                                        TextColor="Black"
                                        FontSize="13"
                                        HeightRequest="100"
@@ -72,6 +66,5 @@
                 </CollectionView>
             </Grid>
         </ScrollView>
-       
     </Grid>
 </ContentPage>

@@ -3,37 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cinepolis.Views.Home"
              NavigationPage.HasNavigationBar="False">
-
     <ScrollView>
-        <VerticalStackLayout
-            Padding="10">
-
-            <Image
-                Source="cinepolis_logo.svg"
-                HeightRequest="75" />
-
-            <Picker x:Name="pickerCine"
-                    Title="Elegir cine:"
-                    CharacterSpacing="1"
-                    FontSize="15"
-                    TitleColor="Gray"
-                    FontFamily="Gilroy-SemiBold">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>San Pedro Sula</x:String>
-                        <x:String>Tegucigalpa</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
+        <VerticalStackLayout Padding="10">
+            <Image Source="cinepolis_logo.svg"
+                   HeightRequest="75" />
+            <Picker x:Name="pickerCines"
+                    Title="Selecciona un cine"
+                    ItemsSource="{Binding ListaCines}"
+                    SelectedItem="{Binding CineSeleccionado}">
+                <Picker.ItemDisplayBinding>
+                    <Binding Path="Nombre" />
+                </Picker.ItemDisplayBinding>
             </Picker>
-
-            <Label Text="Cartelera" 
-                   FontSize="18" 
-                   Margin="5,20,10,5" 
+            <Label Text="{Binding CineSeleccionado?.Nombre}" />
+            <Label Text="Cartelera"
+                   FontSize="18"
+                   Margin="5,20,10,5"
                    TextColor="#002f6c"
-                   FontFamily="Gilroy-SemiBold"/>
+                   FontFamily="Gilroy-SemiBold" />
             <!-- Primer CarouselView -->
             <CarouselView Margin="5,6,5,5"
-                          ItemsSource="{Binding Movie}"
+                          x:Name="carrusel1"
+                          ItemsSource="{Binding Lista}"
                           IndicatorView="indicatorV">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
@@ -48,7 +39,7 @@
                                        Aspect="AspectFill"
                                        Source="{Binding RutaImagenP}">
                                     <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnCarouselItemTapped"/>
+                                        <TapGestureRecognizer Tapped="OnCarouselItemTapped" />
                                     </Image.GestureRecognizers>
                                 </Image>
                                 <StackLayout Grid.Row="2"
@@ -74,16 +65,15 @@
                            IndicatorSize="8"
                            SelectedIndicatorColor="#002f6c"
                            Margin="5"
-                           VerticalOptions="Center"/>
-
-            <Label Text="Próximos Estrenos" 
-                   FontSize="18" 
-                   Margin="5,20,10,5" 
+                           VerticalOptions="Center" />
+            <Label Text="Próximos Estrenos"
+                   FontSize="18"
+                   Margin="5,20,10,5"
                    TextColor="#002f6c"
-                   FontFamily="Gilroy-SemiBold"/>
+                   FontFamily="Gilroy-SemiBold" />
             <!-- Segundo CarouselView -->
             <CarouselView Margin="5,5,10,5"
-                          ItemsSource="{Binding Movie2}"
+                          ItemsSource="{Binding ListaEstrenos}"
                           IndicatorView="indicatorV2">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
@@ -97,9 +87,7 @@
                                 <Image Grid.RowSpan="3"
                                        Aspect="AspectFill"
                                        Source="{Binding RutaImagenP}">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnCarouselItemTapped"/>
-                                    </Image.GestureRecognizers>
+                                    
                                 </Image>
                                 <StackLayout Grid.Row="2"
                                              BackgroundColor="Gray"
@@ -124,11 +112,9 @@
                            IndicatorSize="8"
                            SelectedIndicatorColor="#002f6c"
                            Margin="5"
-                           VerticalOptions="Center"/>
-
+                           VerticalOptions="Center" />
             <Label Text="© Grupo #3 - 2023"
-                   Margin="125,15,10,10">
-            </Label>
+                   Margin="125,15,10,10"></Label>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

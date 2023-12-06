@@ -1,5 +1,7 @@
 ﻿using Firebase.Auth;
 using Cinepolis.Views;
+using Cinepolis.Models;
+
 namespace Cinepolis
 {
     public partial class App : Application
@@ -10,5 +12,6 @@ namespace Cinepolis
             MainPage = new NavigationPage(new LoginPage(firebaseAuthClient));
             //MainPage = new AppShell();
         }
+        public static Selecciones selecciones = new Selecciones();
     }
 }
