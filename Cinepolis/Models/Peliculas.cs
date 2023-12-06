@@ -13,5 +13,6 @@ namespace Cinepolis.Models
         public string Sinopsis { get; set; }
         public string RutaImagenP { get; set; }
         public string RutaImagenB { get; set; }
+        public string Sala { get; set; }
     }
 }

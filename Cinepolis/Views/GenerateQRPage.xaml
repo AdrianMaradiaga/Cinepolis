@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cinepolis.Views.GenerateQRPage"
              Title="Generador QR"
-             Shell.TabBarIsVisible="False">
+             Shell.TabBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+    
     <ScrollView>
         <VerticalStackLayout Spacing="10"
                              Padding="30"

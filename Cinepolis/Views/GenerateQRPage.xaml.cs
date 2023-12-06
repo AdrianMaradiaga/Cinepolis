@@ -30,6 +30,6 @@ public partial class GenerateQRPage : ContentPage
         InputTextHora.Text = string.Empty;
         InputTextAsiento.Text = string.Empty;
         InputTextFecha.Text = string.Empty;
-        QrCodeImage.Source = null; // Limpiar la imagen del código QR si es necesario
+        QrCodeImage.Source = null; 
     }
 }

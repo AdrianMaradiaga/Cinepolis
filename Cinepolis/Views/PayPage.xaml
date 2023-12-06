@@ -10,6 +10,12 @@
         <Image Source="cinepolis_logo.png"
                Aspect="AspectFill" />
         <StackLayout Margin="20">
+            <Label Text="Nombre del titular"
+                   FontSize="Medium" />
+            <Entry Placeholder="Ingrese el nombre"
+                   Keyboard="Text"
+                   x:Name="nombreEntry"
+                   MaxLength="40" />
             <Label Text="Número de Tarjeta"
                    FontSize="Medium" />
             <Entry Placeholder="Ingrese el número de tarjeta"

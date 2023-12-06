@@ -16,7 +16,7 @@ public partial class PayPage : ContentPage
 
     private async void validaciones()
     {
-        if (string.IsNullOrWhiteSpace(numeroTarjetaEntry.Text) || numeroTarjetaEntry.Text.Length != 16)
+        if (string.IsNullOrWhiteSpace(numeroTarjetaEntry.Text) || numeroTarjetaEntry.Text.Length < 12)
         {
             await DisplayAlert("Error", "Ingrese un número de tarjeta válido (16 dígitos)", "OK");
             return;
@@ -28,9 +28,9 @@ public partial class PayPage : ContentPage
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(cvvEntry.Text) || cvvEntry.Text.Length != 4)
+        if (string.IsNullOrWhiteSpace(cvvEntry.Text) || cvvEntry.Text.Length != 3)
         {
-            await DisplayAlert("Error", "Ingrese un código CVV válido (4 dígitos)", "OK");
+            await DisplayAlert("Error", "Ingrese un código CVV válido (3 dígitos)", "OK");
             return;
         }
 

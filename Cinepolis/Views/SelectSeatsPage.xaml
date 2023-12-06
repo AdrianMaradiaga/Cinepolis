@@ -38,8 +38,8 @@
                                    TextColor="Gray" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Sala:" FontFamily="Gilroy-SemiBold" FontSize="15" />
-                            <Label Text=" 1" FontFamily="Gilroy-SemiBold" FontSize="15" TextColor="Gray"/>
+                            <Label Text="Sala: " FontFamily="Gilroy-SemiBold" FontSize="15" />
+                            <Label x:Name="SalaLabel" Text="1" FontFamily="Gilroy-SemiBold" FontSize="15" TextColor="Gray"/>
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>

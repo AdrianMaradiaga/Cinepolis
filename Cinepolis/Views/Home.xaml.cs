@@ -19,8 +19,6 @@ public partial class Home : ContentPage
 
         CargarListas();
         BindingContext = this;
-
-
     }
 
     private void CargarListas()
