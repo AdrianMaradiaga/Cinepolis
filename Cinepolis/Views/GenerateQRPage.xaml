@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cinepolis.Views.GenerateQRPage"
              Title="Generador QR"
-             Shell.TabBarIsVisible="False"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             Shell.TabBarIsVisible="False">
     
     <ScrollView>
         <VerticalStackLayout Spacing="10"
@@ -16,6 +16,16 @@
                    SemanticProperties.Description="Datos"
                    FontSize="18"
                    HorizontalOptions="FillAndExpand" />
+            <Frame BorderColor="LightSlateGray"
+                   Padding="10,0">
+                <Entry x:Name="InputTextUsuario"
+                       Text=""
+                       Placeholder="Usuario"
+                       SemanticProperties.HeadingLevel="Level2"
+                       SemanticProperties.Description="Introduzca el usuarioo aquí..."
+                       FontSize="18"
+                       HorizontalOptions="FillAndExpand" />
+            </Frame>
             <!-- el nombre de la película -->
             <Frame BorderColor="LightSlateGray"
                    Padding="10,0">
@@ -24,6 +34,16 @@
                        Placeholder="Nombre de pelicula"
                        SemanticProperties.HeadingLevel="Level2"
                        SemanticProperties.Description="Introduzca el nombre de la película aquí..."
+                       FontSize="18"
+                       HorizontalOptions="FillAndExpand" />
+            </Frame>
+            <Frame BorderColor="LightSlateGray"
+                   Padding="10,0">
+                <Entry x:Name="InputTextCine"
+                       Text=""
+                       Placeholder="Nombre del Cine"
+                       SemanticProperties.HeadingLevel="Level2"
+                       SemanticProperties.Description="Introduzca el nombre de cine aquí..."
                        FontSize="18"
                        HorizontalOptions="FillAndExpand" />
             </Frame>
@@ -38,6 +58,8 @@
                        FontSize="18"
                        HorizontalOptions="FillAndExpand" />
             </Frame>
+            
+            
             <!-- Entry para el número de asiento -->
             <Frame BorderColor="LightSlateGray"
                    Padding="10,0">
@@ -49,14 +71,14 @@
                        FontSize="18"
                        HorizontalOptions="FillAndExpand" />
             </Frame>
-            <!-- Entry para la fecha -->
+            <!-- Entry para el número de asiento -->
             <Frame BorderColor="LightSlateGray"
                    Padding="10,0">
-                <Entry x:Name="InputTextFecha"
+                <Entry x:Name="InputTextSala"
                        Text=""
-                       Placeholder="Fecha"
+                       Placeholder="Número de sala"
                        SemanticProperties.HeadingLevel="Level2"
-                       SemanticProperties.Description="Introduzca la fecha aquí..."
+                       SemanticProperties.Description="Introduzca aquí el número de saka..."
                        FontSize="18"
                        HorizontalOptions="FillAndExpand" />
             </Frame>

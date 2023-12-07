@@ -8,12 +8,11 @@ namespace Cinepolis.Models
 {
     public class Facturas
     {
-        public string usuario;
-        public string pelicula;
-        public string cine;
-        public string horario;
-        public string sala;
-        public string asiento;
-        public string total;
+        public string usuario { get; set; }
+        public string pelicula { get; set; }
+        public string cine { get; set; }
+        public string horario { get; set; }
+        public string sala { get; set; }
+        public string asiento { get; set; }
     }
 }

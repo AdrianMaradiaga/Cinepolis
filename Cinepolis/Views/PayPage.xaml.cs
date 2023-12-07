@@ -10,6 +10,8 @@ public partial class PayPage : ContentPage
 
     private void RealizarPago_Clicked(object sender, EventArgs e)
     {
+        App.selecciones.Usuario = nombreEntry.Text;
+
         validaciones();
     }
 
